@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template
+from flask import Flask,request,render_template, url_for
 from werkzeug.utils import secure_filename
 import numpy as np
 import os
@@ -36,16 +36,18 @@ def predict_image(filename,model):
     
     # plt.title("Prediction - {}".format(category[index][1]))
 @app.route('/')
-def hello_world():
-   return 'Hello World'
+def home():
+   return render_template('home.html')
+#    templates\x\x.html
+#    return render_template("recipes/x.html")
 
 @app.route('/demo',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
-        return render_template('demo.html')
+        return render_template('demo1.html')
     else:
         if request.method == 'POST':
-            file = request.files['img']
+            file = request.files['img']s
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD'], filename))
             img = os.path.join(app.config['UPLOAD'], filename)
@@ -56,12 +58,20 @@ def predict_datapoint():
             # data=Predict_pipeline()
             # results = data.predict_food_image(img,model_load)
             results = predict_image(img,model_load)
-            return render_template('demo.html', img=img,results=results)
-        return render_template('demo.html')
+            return render_template('demo1.html', img=img,results=results)
+        return render_template('demo1.html')
         # results = data.predict_food_image(image,model_load)
         # print(results)
         # return render_template('demo.html',results=results)
-
+@app.route('/about')
+def about():
+   return render_template('about.html')
+@app.route('/contact')
+def contact():
+   return render_template('contact.html')
+@app.route('/')
+def recipes():
+   return render_template('recipes.html')
 
 
 if __name__=="__main__":

@@ -1,0 +1,247 @@
+
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+/* page title styles */
+#page__title {
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+}
+.page__title__text {
+    padding: auto;
+	font-size: 2.2rem;
+	color: var(--black-1);
+    
+
+}
+@media only screen and (min-width: 768px) {
+	#page__title {
+		padding-top: 5rem;
+		padding-bottom: 3rem;
+	}
+	.page__title__text {
+		font-size: 3rem;
+        margin-bottom: 20px;
+	}
+}
+/* Our Specials Menu Styles
+#ourSpecials {
+	padding: 0;
+}
+.ourSpecials__title {
+	font-size: 1.8rem;
+	color: var(--black-1);
+	margin-bottom: 2rem;
+}
+.ourSpecials__wrapper {
+	display: flex;
+	gap: 1.5rem;
+	flex-direction: column;
+	max-width: 400px;
+}
+.ourSpecials__item {
+	flex: 1;
+	display: flex;
+	gap: 2rem;
+	background-color: var(--lightGreen-1);
+	padding: 1.5rem;
+	border-radius: 12px;
+}
+.ourSpecials__item__img,
+.ourSpecials__item__info {
+	flex: 1;
+}
+.ourSpecials__item__img {
+	border-radius: 12px;
+	overflow: hidden;
+}
+.ourSpecials__item__img img {
+	object-fit: cover;
+}
+.ourSpecials__item__title {
+	font-size: 2.4rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+	color: var(--black-1);
+	line-height: 1.2em;
+}
+.ourSpecials__item__price {
+	font-size: 1.8rem;
+	color: var(--green-1);
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+.ourSpecials__item__stars {
+	width: max-content;
+}
+@media only screen and (min-width: 768px) {
+	.ourSpecials__title {
+		font-size: 2.4rem;
+	}
+	.ourSpecials__wrapper {
+		flex-direction: row;
+		gap: 2rem;
+		max-width: none;
+	}
+	.ourSpecials__item {
+		padding: 3rem;
+		gap: 2rem;
+	}
+	.ourSpecials__item__title {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+	}
+	.ourSpecials__item__price {
+		font-size: 2.4rem;
+		margin-bottom: 1.5rem;
+	}
+}
+@media only screen and (min-width: 1100px) {
+	.ourSpecials__item__img {
+		flex: 4;
+	}
+	.ourSpecials__item__info {
+		flex: 3;
+	}
+} */
+
+/* Dish Grid Styles
+#dishGrid {
+	padding-bottom: 0;
+}
+#dishGrid:last-of-type {
+	padding-bottom: 10rem;
+} */
+
+
+
+
+
+/* #######################*/
+
+
+/* * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  } */
+/*   
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #535c68;
+  } */
+  
+  .wrapper {
+    margin: auto;
+    max-width: 800px;
+    max-height: 800px;
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+  .container {
+    /* background-color: #f9f9f9; */
+    padding: 20px;
+    border-radius: 10px;
+    /*border: 0.5px solid rgba(130, 130, 130, 0.25);*/
+    /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 
+                0 0 0 1px rgba(0, 0, 0, 0.1);*/
+  }
+  
+  h1 {
+    color: #130f40;
+    height: auto;
+    width: auto;
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: -.5px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+  
+  .upload-container {
+    background-color: rgb(239, 239, 239);
+    border-radius: 80px;
+    padding: 100px;
+    width: 920px;
+    height: 400px;
+  }
+  
+  .border-container {
+    border: 5px dashed rgba(198, 198, 198, 0.65);
+    border-radius: 80px;
+    padding: 14px;
+    width: 700px;
+    height: 100px;
+  }
+  
+  /* .border-container p {
+    color: #130f40;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: -1px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    opacity: 0.65;
+  } */
+  .border-container p {
+    color: #130f40;
+    font-weight: 600;
+    font-size: 1.7em;
+    /* letter-spacing: -1px; */
+    margin-top: 20px;
+    margin-bottom: 0;
+    opacity: 0.69;
+   
+  }
+  img{
+    max-width: 900px;
+  }
+  .imag_size{
+    max-width: 900px;
+  }
+  #image_input{
+    font-size: x-large;
+    margin-left: 70px;
+    margin-top: 16px;
+  }
+  .submit_buttn{
+    border-radius: 16px;
+    cursor: pointer;
+    width: 260px;
+    font-size: 33px;
+    margin-top: 67px;
+    overflow: visible;
+    height: 70px;
+}
+.submit_buttn:hover {
+  background-color: #555555;
+  color: white;
+}
+  /* #display_image{
+    width: 375px;
+    height: 211px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+  } */
+  
+  #file-browser {
+
+    text-decoration: none;
+    color: rgb(22,42,255);
+    border-bottom: 3px dotted rgba(22, 22, 255, 0.85);
+  }
+  
+  #file-browser:hover {
+    color: rgb(0, 0, 255);
+    border-bottom: 3px dotted rgba(0, 0, 255, 0.85);
+  }
+  
+  .icons {
+    color: #95afc0;
+    opacity: 0.9;
+  } 
+  .center_display{
+    text-align: center;
+  }

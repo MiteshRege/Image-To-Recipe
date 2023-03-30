@@ -16,10 +16,11 @@
 	margin: 0 1rem;
 }
 .nav__list .nav__link {
-	font-size: 1.8rem;
-	font-family: Poppins;
-	color: var(--black-2);
-	padding: 0.5rem;
+	font-size: 2.4rem;
+    font-family: Poppins;
+    color: var(--black-2);
+    padding: 2.6rem;
+	
 }
 .nav__list li:hover .nav__link {
 	color: var(--green-1);
@@ -94,7 +95,7 @@
 	font-family: Poppins;
 	font-weight: 500;
 	border-radius: 8px;
-	font-size: 1.4rem;
+	font-size: 3rem;
 	padding: 1.2rem 2rem;
 }
 .primary-btn {
