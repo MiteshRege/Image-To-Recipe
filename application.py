@@ -41,13 +41,15 @@ def home():
 #    templates\x\x.html
 #    return render_template("recipes/x.html")
 
+
+
 @app.route('/demo',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
         return render_template('demo1.html')
     else:
         if request.method == 'POST':
-            file = request.files['img']s
+            file = request.files['img']
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD'], filename))
             img = os.path.join(app.config['UPLOAD'], filename)
@@ -65,13 +67,47 @@ def predict_datapoint():
         # return render_template('demo.html',results=results)
 @app.route('/about')
 def about():
-   return render_template('about.html')
+   return render_template('recipe-pages/about.html')
 @app.route('/contact')
 def contact():
-   return render_template('contact.html')
-@app.route('/')
+   return render_template('recipe-pages/contact.html')
+@app.route('/recipes')
 def recipes():
-   return render_template('recipes.html')
+   return render_template('recipe-pages/recipes.html')
+
+@app.route('/pizza')
+def pizza():
+   return render_template('recipe-pages/pizza.html')
+
+@app.route('/samosa')
+def samosa():
+   return render_template('recipe-pages/samosa.html')
+
+@app.route('/masala_chai')
+def masala_chai():
+   return render_template('recipe-pages/masala_chai.html')
+
+@app.route('/fried_rice')
+def fried_rice():
+   return render_template('recipe-pages/fried_rice.html')
+
+@app.route('/Dhokla')
+def Dhokla():
+   return render_template('recipe-pages/Dhokla.html')
+
+@app.route('/dal_makhani')
+def dal_makhani():
+   return render_template('recipe-pages/dal_makhani.html')
+
+@app.route('/chole_bhature')
+def chole_bhature():
+   return render_template('recipe-pages/chole_bhature.html')
+@app.route('/chapati')
+def chapati():
+   return render_template('recipe-pages/chapati.html')
+@app.route('/butter_naan')
+def butter_naan():
+   return render_template('recipe-pages/butter_naan.html')
 
 
 if __name__=="__main__":
