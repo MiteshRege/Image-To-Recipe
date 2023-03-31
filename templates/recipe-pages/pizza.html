@@ -7,23 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza</title>
     <!-- favicon -->
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico')}}" type="image/x-icon">
     <!-- normalize -->
-    <link rel="stylesheet" href="/Major_proj_frontend/css/main1.css" />
+    <!-- <link rel="stylesheet" href="/Major_proj_frontend/css/main1.css" /> -->
+    <!-- static\css\css1\main1.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css1/main1.css')}}" />
+
     <!-- font-awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <!-- main1 css -->
-    <link rel="stylesheet" href="/css/main1.css" />
+    <!-- <link rel="stylesheet" href="/css/main1.css" /> -->
+    <!-- static\css\css1\main1.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css1/main1.css')}}" />
+
+    <!-- footer css -->
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css')}}"> -->
+    <!-- <link rel="stylesheet" href="./globalStyles.css"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/globalStyles.css')}}"> -->
+     <!-- <link rel="stylesheet" href="./components.css"> -> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css')}}"> -->
+    <!-- aos library css  -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <!-- Add your custom css -->
+    <!-- <link rel="stylesheet" href="./home.css"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}"> -->
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <!-- custom script -->
+    <!-- <script src="./main.js"></script> -->
+    <!-- static\scripts\main.js -->
+    <!-- <script src="{{ url_for('static', filename='scripts/main.js')}}"></script> -->
+
+
   </head>
   <body>
     <nav class="back-nav">
     
       <div class="btn-class" >
-        <a href="\recipes.html" class="btn btn-123"> 
-          <h2>Back</h2>
+        <!-- <a href="\recipes.html" class="btn btn-123">  -->
+          <a href="{{url_for('home')}}" class="btn btn-123">
+          <h2 class="btn-back">Back</h2>
+          </a>
         </a>
       </div>
     
@@ -32,12 +59,11 @@
     <main1 class="page">
       <div class="recipe-page">
         <section class="recipe-hero">
-          <img
-            src="\assets\recipes\pizza.jpg"
-            class="img recipe-hero-img"
-          />
+          <!-- <img src="\assets\recipes\pizza.jpg" class="img recipe-hero-img" /> -->
+          <!-- static\images\assets\recipes\pizza.jpg -->
+          <img src="{{ url_for('static', filename='images/assets/recipes/pizza.jpg')}}" class="img recipe-hero-img" />
           <article class="recipe-info">
-            <<h2>Pizza</h2>
+            <h2>Pizza</h2>
             <p>
             this recipe includes instructions for how to create a chewy crust that’s lightly crisp on the bottom using all-purpose flour or bread flour. It makes a dough that is far better (and cheaper!) than any store bought dough or restaurant pizza I have tried.
 
@@ -74,7 +100,9 @@ I make pizza dough with both unbleached bread flour and unbleached all purpose f
               </article>
             </div>
             <p class="recipe-tags">
-              Category : <a href="tag-template.html">main1 course</a>
+              Category : 
+              <!-- <a href="tag-template.html">main1 course</a> -->
+              <a href="#">main1 course</a>
               <!-- <a href="tag-template.html">breakfast</a>
               <a href="tag-template.html">pancakes</a>
               <a href="tag-template.html">food</a> -->
@@ -329,13 +357,147 @@ a triangular slice of veg pizza with the remain1ing pizza on a wooden pizza plat
       </div>
     </main1>
     <!-- footer -->
+    <!-- <footer>
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__col1">
+            <div class="footer__logo">
+               <img src="images\F2R-Logo.png" alt="Recommend Food">
+              <img class="image-fotter" src="{{ url_for('static', filename='images\F2R-logo.svg')}}" alt="FoodToRecipe">
+            </div>
+            <p class="footer__desc">
+                 Food TO Recipe
+            </p>
+            <div class="footer__socials">
+              <h4 class="footer__socials__title">Follow us</h4>
+              <ol class="footer__socials__list">
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-facebook">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-instagram">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-twitter">
+                      <path
+                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                    </svg>
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="footer__col2">
+            <h3 class="footer__text__title">
+              Links
+            </h3>
+            <ol class="footer__text">
+              <li>
+                <a href="{{url_for('home')}}">Home</a>
+              </li>
+              <li>
+                <a href="{{url_for('predict_datapoint')}}">Demo</a>
+              </li>
+              <li>
+                <a href="{{url_for('about')}}">About Us</a>
+              </li>
+              <li>
+                <a href="{{url_for('contact')}}">contact Us</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ol>
+          </div>
+          <div class="footer__col3">
+            <h3 class="footer__text__title">
+              Support
+            </h3>
+            <ol class="footer__text">
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">Support Center</a>
+              </li>
+              <li>
+                <a href="#">Feedback</a>
+              </li>
+            </ol>
+          </div>
+          <div class="footer__col4">
+            <h3 class="footer__text__title">
+              Contact
+            </h3>
+            <ol class="footer__text">
+              <li>
+                <a href="#">Mitesh Rege:</a>
+              </li>
+              <li>
+              <a>phno:- +880230603</a>
+              </li>
+              <li>
+                <a href="#">miteshrege4@gmail.com</a>
+              </li>
+              <li>
+                <a href="#">Prajna Sheety:- </a>
+              </li>
+              <li>
+                <a href="#">phno:-154478963</a>
+              </li>
+              <li>
+                <a href="#">prajnashetty@gmail.com</a>
+              </li>
+              <li>
+                <a href="#">Shivam Mishra:-</a>
+              </li>
+              <li>
+                <a href="#">phno: +858263603</a>
+              </li>
+              <li>
+                <a href="#">shivmishra12062002@gmail.com</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="copyright">
+      <div class="container">
+        <p class="copyright__text">
+          © copyright 2021  | All rights reserved
+        </p>
+      </div>
+    </div> -->
+  <!-- Footer ends -->
+      
+    <!-- <script src="./js/app.js"></script> -->
+    <!-- static\scripts\js\app.js -->
+    <!-- footer -->
     <footer class="page-footer">
       <p>
         &copy; <span id="date"></span>
-        <span class="footer-logo">SimplyRecipes</span> Built by
-        <a href="https://www.johnsmilga.com/">Coding Addict</a>
+        <span class="footer-logo">FoodToRecipe</span> Built by
+        <a href="https://www.linkedin.com/in/mitesh-rege/">Mitesh Rege</a>
       </p>
     </footer>
-    <script src="./js/app.js"></script>
+    <script src="{{ url_for('static', filename='scripts/js/app.js')}}"></script>
   </body>
 </html>
